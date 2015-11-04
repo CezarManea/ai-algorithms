@@ -1,28 +1,29 @@
-var weka = require('./../node_modules/node-weka-master/lib/weka-lib');
+var weka = require('node-weka');
 var arff = require('node-arff');
 
-arff.load('D:\\Faculta\\AN3\\ai-algorithms\\src\\training.arff', function(err, data) {
+arff.load('training.arff', function (err, data) {
     if (err) {
         return console.error(err);
     }
 
     var options = {
-        //'classifier': 'weka.classifiers.bayes.NaiveBayes',
-        'classifier': 'weka.classifiers.functions.SMO',
-        'params'    : ''
+        'classifier': 'weka.classifiers.trees.Id3',
+        'params': ''
     };
 
     var testData = {
-        outlook    : 'sunny',
-        windy      : 'TRUE',
-        temperature: 30,
-        humidity   : 2,
-        play       : 'no' // last is class attribute
+        buying: 'high',
+        maint: 'high',
+        doors: '2',
+        persons: 'more',
+        lug_boot: 'big',
+        safety: 'med',
+        class: 'good'
     };
 
     weka.classify(data, testData, options, function (err, result) {
 
-        console.log(result); //{ predicted: 'yes', prediction: '1' }
+        console.log(result);
 
     });
 

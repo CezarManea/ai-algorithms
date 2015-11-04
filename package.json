@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/CezarManea/ai-algorithms/issues"
   },
-  "homepage": "https://github.com/CezarManea/ai-algorithms"
+  "homepage": "https://github.com/CezarManea/ai-algorithms",
+  "dependencies": {
+    "node-arff": "^1.0.0",
+    "node-weka": "0.0.8"
+  }
 }
