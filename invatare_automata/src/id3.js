@@ -16,13 +16,12 @@ arff.load('training.arff', function (err, data) {
         maint: 'high',
         doors: '2',
         persons: 'more',
-        lug_boot: 'big',
+        lug_boot: 'small',
         safety: 'med',
         class: 'good'
     };
 
     weka.classify(data, testData, options, function (err, result) {
-
         console.log(result);
 
     });
