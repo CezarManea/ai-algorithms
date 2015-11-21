@@ -1,0 +1,10 @@
+1. download Stanford CoreNLP v3.3.1 http://www-nlp.stanford.edu/software/stanford-corenlp-full-2014-01-04.zip
+
+2. make sure you have JDK 1.7 installed and the environment variable $JAVA_HOME is set to the JDK's path
+   ex: OS X: $JAVA_HOME should be /Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
+   (JDK 1.6 did not work, JDK 1.8 was not tried)
+
+3. npm install
+   should install stanford-simple-nlp, request, cheerio
+4. copy Stanford CoreNLP archive contents to node_modules/stanford-simple-nlp/jar
+5. run app.js
